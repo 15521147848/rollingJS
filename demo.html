@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="./rolling.css">
+</head>
+<body>
+	<div id='content'></div>
+</body>
+<script src='rolling.js'>
+
+</script>
+<script>
+	var content = document.getElementById("content");
+
+	new Roll({
+		'el':content,//dom
+		'width':800,//dom width
+		'height':500,//dom height
+		'img':['1.jpg','2.jpg','3.jpg','4.jpg'],// img array
+		'type':"down", //Rolling direction
+		// 'nav':true,
+		// 'navClass':'myNavClass',
+		'time':10,//Rolling time;
+		'speed':1//Rolling speed;
+	});
+</script>
+</html>
