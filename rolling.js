@@ -54,6 +54,7 @@ function addImg(img,el,type,time,speed){
 		el.appendChild(imgContent);
 		el.appendChild(imgContent2);
 		rollLeft(imgContent,imgContent2,width,contentWidth,time,speed);
+		break;
 	case "right":
 		var width = (contentWidth*length);
 		imgContent.style.width = width+'px';
@@ -85,6 +86,7 @@ function addImg(img,el,type,time,speed){
 		el.appendChild(imgContent);
 		el.appendChild(imgContent2);
 		rollRight(imgContent,imgContent2,width,contentWidth,time,speed);
+		break;
 	case "up":
 		var height = (contentHeight*length);
 		imgContent.style.width = contentWidth+'px';
@@ -116,7 +118,8 @@ function addImg(img,el,type,time,speed){
 		el.appendChild(imgContent);
 		el.appendChild(imgContent2);
 		rollUp(imgContent,imgContent2,height,contentHeight,time,speed);
-case "down":
+		break;
+	case "down":
 		var height = (contentHeight*length);
 		imgContent.style.width = contentWidth+'px';
 		imgContent.style.height = height+'px';
@@ -147,7 +150,7 @@ case "down":
 		el.appendChild(imgContent);
 		el.appendChild(imgContent2);
 		rollDown(imgContent,imgContent2,height,contentHeight,time,speed);
-
+		break;
 	}
 
 }
@@ -158,7 +161,7 @@ function rollLeft(img1,img2,width,contentWidth,time,speed){
 		var x = 0;
 		var y = contentWidth;
 		var Interval = setInterval(function(){
-			x+=speed;
+			x-=speed;
 			img1.style.left = x +'px';
 			if(x<=(-width+contentWidth)){
 				y-=speed;
